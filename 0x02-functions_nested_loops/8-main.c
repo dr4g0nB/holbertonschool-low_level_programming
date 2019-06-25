@@ -5,8 +5,8 @@
  *
  * Return: Always 0.
  */
-
-int add(int n1, int n2)
+int main(void)
 {
-	return (n1 + n2);
+    jack_bauer();
+    return (0);
 }
