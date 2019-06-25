@@ -9,6 +9,14 @@
 
 int main(void)
 {
-	char hol[9]
+	int h;
+
+	char holb[ 9 ] = {'H','o','l','b','e','r','t','o','n'};
+
+	for (h = 0; h <= 9; h++)
+	{
+	 _putchar(holb [h]);
+	}
+	_putchar('\n');
 	return (0);
 }
