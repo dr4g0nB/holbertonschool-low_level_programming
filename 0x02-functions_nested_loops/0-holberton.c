@@ -1,4 +1,4 @@
-#include <holberton.h>
+#include "holberton.h"
 
 /* betty style doc for function main goes there */
 /**
@@ -9,6 +9,6 @@
 
 int main(void)
 {
-	_putchar("Holberton"\n);
+	char hol[9]
 	return (0);
 }
