@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	unsigned long h;
-	char holb[] = {'H', 'o', 'l', 'b', 'e', 'r', 't', 'o', 'n'};
+	int   h;
+	char  holb[] = "Holberton";
 
-	for (h = 0; h <= sizeof(holb); h++)
+	for (h = 0; h <= 8; h++)
 	{
 	_putchar(holb[h]);
 	}
