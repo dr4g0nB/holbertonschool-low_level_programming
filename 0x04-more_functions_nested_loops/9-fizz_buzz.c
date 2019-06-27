@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- *
- *
+ * main - Entry point.
+ * Return: 0.
  */
 
 int main(void)
@@ -10,7 +10,7 @@ int main(void)
 	int numb;
 
 	for (numb = 1; numb < 101; numb++)
-	{	
+	{
 		if ((numb % 3 == 0) && (numb % 5 == 0))
 		{
 			printf("FizzBuzz ");
@@ -36,5 +36,5 @@ int main(void)
 		}
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
