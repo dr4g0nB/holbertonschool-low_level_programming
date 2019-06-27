@@ -1,20 +1,23 @@
 #include "holberton.h"
 
 /**
- *
- *
- *
+ * print_line - prints a char or a line.
+ * @n: times to be repeated.
+ * Returns: Nothing.
  */
 
 void print_line(int n)
 {
+	int r;
 
-	for (n >= 49; n < 58; n++)
+	if (n <= 0)
+		_putchar('\n');
+	else
 	{
-		if (n >= 48)
+		for (r = 1; r <= n; r++)
 		{
-			_putchar(\n);
+			_putchar('_');
 		}
-	_putchar(95);
+		_putchar('\n');
 	}
 }
