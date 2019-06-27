@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * print_triangle: Prints a triangle
+ * print_triangle - Prints a triangle.
  * @size: size of triangle.
  **/
 
@@ -18,10 +18,17 @@ void print_triangle(int size)
 	{
 		for (col = 0; col < size; col++)
 		{
-			for (fil = 0; fil < col; fil++)
+			for (fil = 0; fil < size; fil++)
 			{
-				_putchar(' ');
-				_putchar(35);
+				if (fil < (size - (col + 1)))
+				{
+					_putchar(' ');
+				}
+				else
+				{
+					_putchar(35);
+				}
+
 			}
 		_putchar('\n');
 		}
