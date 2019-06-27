@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * more_numbers - wil print more numbers. 
+ * more_numbers - wil print more numbers.
  *
  * Return: 0.
  */
@@ -11,7 +11,7 @@ void more_numbers(void)
 	int n;
 	int time;
 
-	for (time = 0; time < 11; time++)		
+	for (time = 0; time < 11; time++)
 	{
 		for (n = 0; n < 15; n++)
 		{
