@@ -8,16 +8,19 @@
 
 void more_numbers(void)
 {
-	int tentimes;
-	char n;
+	int n;
+	int time;
 
-	for (tentimes = 0; tentimes < 11; tentimes++)
+	for (time = 0; time < 11; time++)		
 	{
-		for (n = 48; n <58; n++)
+		for (n = 0; n < 15; n++)
 		{
-			_putchar(n);
+			if (n > 9)
+			{
+				_putchar(n / 10 + '0');
+			}
+			_putchar(n % 10 + '0');
 		}
-	_putchar('\n');
+		_putchar('\n');
 	}
-
 }
