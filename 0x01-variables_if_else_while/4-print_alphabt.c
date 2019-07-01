@@ -3,7 +3,7 @@
 
 int main(void)
 {
-	char i = 97;
+	char i;
 
 	for (i = 97; i <= 122; i++)
 	{
