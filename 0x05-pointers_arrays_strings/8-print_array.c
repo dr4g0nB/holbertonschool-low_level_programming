@@ -9,17 +9,17 @@
 
 void print_array(int *a, int n)
 {
-	int c;
+	int c;/**contador*/
 
 	for (c = 0; c < n; c++)
 	{
-		if (c != n)
+		if (c != n - 1) /** n - 1 para decirle que es el final*/
 		{
 			printf("%d, ", a[c]);/**posicion de int *a*/
 		}
 		else
 		{
-			printf("%d", a[c]);
+			printf("%d ", a[c]);
 		}
 	}
 		printf("\n");
