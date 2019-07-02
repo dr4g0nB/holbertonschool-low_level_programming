@@ -1,24 +1,16 @@
 #include "holberton.h"
 
 /**
+ * main - check the code for Holberton School students.
  *
- *
+ * Return: Always 0.
  */
 
-void print_rev(char *s)
+int main(void)
 {
-	int in;
+    char *str;
 
-	int count(char *str)
-	{
-		for (in = 0; str[in] != '\0'; str++)
-		{}
-		return (i);
-	}
-
-	n = count(str);
-	for (in = n-1; in >= 0; 1--)
-	{
-		_putchar(str[in]);
-	}
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    print_rev(str);
+    return (0);
 }
