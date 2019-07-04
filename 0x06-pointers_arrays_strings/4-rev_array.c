@@ -20,3 +20,4 @@ void reverse_array(int *a, int n)
 		n--;/**Decrementa porque es un reverse*/
 	}
 }
+
