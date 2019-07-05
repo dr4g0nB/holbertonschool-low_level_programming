@@ -25,6 +25,7 @@ char *cap_string(char *cap)
 	{
 		if ((cap[pi - 1] == ' ' || cap[pi - 1] == '\t'
 		 || cap[pi - 1] == '\n' || cap[pi - 1] == ','
+		|| cap[pi - 1] == '.' || cap[pi -1] == '!'
 		|| cap[pi - 1] ==  ';' || cap[pi - 1] == '?'
 		|| cap[pi - 1] == '"' || cap[pi - 1] == '('
 		|| cap[pi - 1] == ')' || cap[pi - 1] == '{' || cap[pi - 1] == '}') &&
