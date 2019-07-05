@@ -28,7 +28,7 @@ char *cap_string(char *cap)
 		|| cap[pi - 1] ==  ';' || cap[pi - 1] == '?'
 		|| cap[pi - 1] == '"' || cap[pi - 1] == '('
 		|| cap[pi - 1] == ')' || cap[pi - 1] == '{' || cap[pi - 1] == '}') &&
-		 (cap[pi] > 'a' && cap[pi] < 'z'))
+		 (cap[pi] > 97 && cap[pi] < 122))
 		{
 			cap[pi] = cap[pi] - 32;
 		}
