@@ -5,6 +5,7 @@
  * @dest: Destination.
  * @src: From where it will be copy.
  * @n: unsigned int.
+ * Return: dest.
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
