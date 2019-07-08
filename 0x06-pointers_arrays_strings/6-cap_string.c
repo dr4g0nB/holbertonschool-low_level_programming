@@ -24,11 +24,12 @@ char *cap_string(char *cap)
 	/**pi igual a 1 bc at the if it's specified from zero */
 	{
 		if ((cap[pi - 1] == ' ' || cap[pi - 1] == '\t'
-		 || cap[pi - 1] == '\n' || cap[pi - 1] == ','
-		|| cap[pi - 1] == '.' || cap[pi -1] == '!'
+		|| cap[pi - 1] == '\n' || cap[pi - 1] == ','
+		/**|| cap[pi - 1] == '.' || cap[pi -1] == '!'*/
 		|| cap[pi - 1] ==  ';' || cap[pi - 1] == '?'
 		|| cap[pi - 1] == '"' || cap[pi - 1] == '('
-		|| cap[pi - 1] == ')' || cap[pi - 1] == '{' || cap[pi - 1] == '}') &&
+		|| cap[pi - 1] == ')' || cap[pi - 1] == '{'
+		|| cap[pi - 1] == '}') &&
 		 (cap[pi] > 97 && cap[pi] < 122))
 		{
 			cap[pi] = cap[pi] - 32;
