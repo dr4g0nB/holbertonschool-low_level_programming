@@ -21,15 +21,14 @@ char *_strchr(char *s, char c)
 		s++; /**e incremente*/
 	}
 	if (*s == c)
-	{
-                /**en pointer s hay un char*/
+	{/**en pointer s hay un char*/
 		return (s);
-                /**retornelo*/
+	/**retornelo*/
 	}
 
 	else
 	{
 		/**sino retorne char null*/
 		return ('\0');
-	}	
+	}
 }
