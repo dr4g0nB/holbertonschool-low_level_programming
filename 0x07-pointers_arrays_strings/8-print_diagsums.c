@@ -1,13 +1,14 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * set_string: .
- * @s: .
- * @to: .
+ * print_diagsums: .
+ * @a: .
+ * @size: .
  * Return: Nothing,
  */
 
-void set_string(char **s, char *to)
+void print_diagsums(int *a, int size)
 {
- *s = to;
+
 }
