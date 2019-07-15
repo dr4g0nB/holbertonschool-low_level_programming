@@ -1,27 +1,35 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - adds positives numbers.
- * @argc: .
- * @argv: .
- * Return: .
+ * @argc: Counts.
+ * @argv: Pointer.
+ * Return: 1.
  */
 
 int main(int argc, char *argv[])
 {
-	int d;
+	int r, sum; 
+	/**int d;*/
 
-	if(argc == '\0')
+	/**d = '97';*/
+	r = 0;
+	sum = 0;
+
+	if (argc > 1)
 	{
-		printf("0\n");
+		for (sum = 0; sum < argc; sum++){
+		r = r + atoi(argv[sum]);}
+		printf("%d\n", r);
 	}
-	if (d >= 'a' && d <= 'z')
+	else
+	{
+		printf("0\n");	
+	}
+	/**if (d >= '97' && d <= '122')
 	{
 		printf("Error\n");
-	}
-	/**else
-	{
-		printf();
-	}*/
+	}*/	
 	return (1);
 }
