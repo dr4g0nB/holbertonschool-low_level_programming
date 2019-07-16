@@ -18,13 +18,14 @@ char *create_array(unsigned int size, char c)
 	{
 		return ('\0');
 	}
-
-	for (cr = 0; cr < size; cr++)
+	else
 	{
-		p[cr] = c;
-	}
+			for (cr = 0; cr < size; cr++)
+			{
+				p[cr] = c;
+			}
 		p[cr] = '\0';
 		return (p);
 		free(p);
-	
+	}
 }
