@@ -11,16 +11,22 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *alloc;
+	unsigned int rein;
 
 	if (nmemb == '\0' || size == '\0')
 	{
 		return (NULL);
 	}
 
-	alloc = malloc(sizeof(alloc) * nmemb);
+	alloc = malloc(nmemb * size);
 	if (alloc == '\0')
 	{
 		return (NULL);
 	}
+
+	for (rein = 0; rein < nmemb; rein++)
+	;
+
+	alloc[rein] = 0;
 	return (alloc);
 }
