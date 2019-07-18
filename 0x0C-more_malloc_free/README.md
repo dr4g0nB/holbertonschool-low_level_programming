@@ -12,8 +12,12 @@ Descripción del proyecto
  Mandatory tasks
 
 | Files    | Description |
+
 | 0. Trust no one | Allocates memory using malloc. |
+
 | 1. String nconcat | Concatenates two strings. |
+
 | 2. Calloc | Allocates the memory for an array. |
+
 | 3. Array range | Creates an array of integers. |
 
