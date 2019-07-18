@@ -6,16 +6,18 @@
  * string_nconcat - Concatenates two strings.
  * @s1: Pointer.
  * @s2: Pointer.
- * n: Int.
+ * @n: Int.
  * Return: NULL.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *empty = "";
+	char *empty;
 	unsigned int len, uno;/** For s1 */
 	unsigned int leng, dos;/** For s2*/
 	char *s3;
+
+	empty = "";
 
 	if (s1 == NULL)
 	{
@@ -41,11 +43,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s3[uno] = s1[uno];
 	}
-	for (dos = 0; dos < n && s2[dos] != '\0'; dos++)
+	for (dos = 0; dos < n && s2[dos] != '\0'; dos++, uno++)
 	{
 		s3[uno] = s2[dos];
-		uno++;
 	}
-	s3[uno + 1] = '\0';
+	s3[uno] = '\0';
 	return (s3);
 }
