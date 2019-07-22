@@ -3,7 +3,42 @@
 #include <stdlib.h>
 
 /**
- * new_dog - Creates a new dog.
+ * _strlen - Length.
+ * @s: Pointer.
+ * Return: len.
+
+ */
+int _strlen(char *s)
+{
+	int len;
+
+	for (len = 0; s[len] != '\0'; len++)
+	;
+	return (len);
+}
+
+/**
+ * _strcpy - Copies.
+ * @dest: Dest.
+ * @src: src.
+ * Return: dest.
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int tmp;
+
+	for (tmp = 0; src[tmp] != '\0'; tmp++)
+	{
+		dest[tmp] = src[tmp];
+		*(dest + 1) = *(src + 1);
+	}
+	dest[tmp] = '\0';
+	return (dest);
+}
+
+/**
+ * new_dog - New dog.
  * @name: Name.
  * @age: Age.
  * @owner: Owner.
@@ -13,32 +48,25 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
-	char *n_name;
-	char *n_owner;
-	int len, lenn;
-	int leng;
-	/**checking if there is something*/
+	char *n_name, *n_owner;
+	int len, lenn, leng;
+
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
 	{
 		return (NULL);
 	}
-	/**Recorro*/
-	for (len = 0; name[len] != '\0'; len++)
-	{}
 	/**Reservo bytes*/
-	n_name = malloc(sizeof(char) * (len + 1));
+	n_name = malloc(sizeof(char *) * (_strlen(name) + 1));
 	if (n_name == NULL)
 	{
 		free(n_name);
 		free(new_dog);
 		return (NULL);
 	}
-	/** Recorro a owner */
-	for (leng = 0; owner[leng] != '\0'; leng++)
-	{}
-
-	n_owner = malloc(sizeof(char) * (leng + 1));
+	/** Copying and saving bytes*/
+	n_name = _strcopy(n_name, name)
+	n_owner = malloc(sizeof(char *) * (_strleng(owner) + 1));
 	if (n_owner == NULL)
 	{
 		free(n_name);
@@ -46,13 +74,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	/**copy n_name = name */
-	for (lenn = 0; lenn < len; lenn++)
-	{
-		n_name[lenn] = name[lenn];
-	}
-	new_dog->name = name;
+	/**Copia de owner a n_owner*/
+	n_owner = _strcopy(n_owner, owner);
+	/**Initialize the var*/
+	new_dog->name = n_name;
 	new_dog->age = age;
-	new_dog->owner = owner;
+	new_dog->owner = n_owner;
 	return (new_dog);
 }
