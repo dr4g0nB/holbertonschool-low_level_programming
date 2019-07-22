@@ -49,7 +49,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 	char *n_name, *n_owner;
-	int len, lenn, leng;
 
 	new_dog = malloc(sizeof(dog_t));
 	if (new_dog == NULL)
@@ -65,8 +64,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/** Copying and saving bytes*/
-	n_name = _strcopy(n_name, name)
-	n_owner = malloc(sizeof(char *) * (_strleng(owner) + 1));
+	n_name = _strcpy(n_name, name);
+	n_owner = malloc(sizeof(char *) * (_strlen(owner) + 1));
 	if (n_owner == NULL)
 	{
 		free(n_name);
@@ -75,7 +74,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/**Copia de owner a n_owner*/
-	n_owner = _strcopy(n_owner, owner);
+	n_owner = _strcpy(n_owner, owner);
 	/**Initialize the var*/
 	new_dog->name = n_name;
 	new_dog->age = age;
