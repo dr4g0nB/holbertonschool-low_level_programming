@@ -6,7 +6,6 @@
  * _strlen - Length.
  * @s: Pointer.
  * Return: len.
-
  */
 int _strlen(char *s)
 {
