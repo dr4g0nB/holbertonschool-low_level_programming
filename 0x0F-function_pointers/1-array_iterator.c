@@ -14,11 +14,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	void (*receive)(int); /**declaring the function that would receive function*/
 
-	receive = action;/**Initializing the function*/
 	if (array == NULL || action == NULL)/**Checking if it's empty*/
 	{
 		return;/**Return nothing*/
 	}
+	receive = action;/**Initializing the function*/
 	for (len = 0; len < size; len++)/**Compare if len is < size*/
 	{
 		receive(array[len]);/**len at array position*/
