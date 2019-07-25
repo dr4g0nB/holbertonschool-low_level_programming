@@ -5,12 +5,14 @@
 
 /**
  * main - Checks for the other codes.
- * Return: .
+ * @argv: Vector.
+ * @argc: Counts the arguments.
+ * Return: r.
  */
 
 int main(int argc, char *argv[])
 {
-	int(*oper)(int, int);
+	int (*oper)(int, int);
 	int v1, v3, r;
 
 	if (argc != 4)
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	r = oper(v1,v3);
-	printf("%d\n", r);	
+	r = oper(v1, v3);
+	printf("%d\n", r);
 	return (0);
 }
