@@ -11,7 +11,7 @@ int sum_them_all(const unsigned int n, ...)
 	va_list suma; /** Declaring va_list */
 
 	unsigned int i, f;
-	
+
 	f = 0;
 
 	va_start(suma, n);/** Initializing va_list and parameter */
