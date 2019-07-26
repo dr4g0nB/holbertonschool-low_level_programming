@@ -16,8 +16,8 @@ int main(int argc, char *argv[])
 	if (argc < 1)
 	{
 		printf("%d\n", 0);
-	}	
-		
+	}
+
 	while (argc-- && argc > 0)
 	{
 		for (d = 0; argv[argc][d] != '\0'; d++)
@@ -32,5 +32,5 @@ int main(int argc, char *argv[])
 		sum += r;
 	}
 	printf("%d\n", sum);
-	return(r);
+	return (r);
 }
