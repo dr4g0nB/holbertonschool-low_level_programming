@@ -13,14 +13,15 @@ int sum_them_all(const unsigned int n, ...)
 
 	unsigned int i, f;
 
-	f = 0;
-
-	va_start(suma, n);/** Initializing va_list and parameter */
-
 	if (n == 0)/** Checking if n receives something */
 	{
 		return (0);
 	}
+
+	f = 0;
+
+	va_start(suma, n);/** Initializing va_list and parameter */
+
 	for (i = 0; i < n; i++)
 	{
 		/** Accessing to each item */
