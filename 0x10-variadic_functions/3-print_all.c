@@ -6,16 +6,18 @@
  * print_all - Prints anything
  * @format: List of arguments.
  */
-
 void print_all(const char * const format, ...)
 {
-	int l;
+	int l = 0;
 	char *str;
 	va_list any;
 
 	va_start(any, format);
-
-	l = 0;
+	while (format == NULL)
+	{
+		printf("\n");
+		return;
+	}
 	while (format[l] != '\0')
 	{
 		switch (format[l])
@@ -41,9 +43,7 @@ void print_all(const char * const format, ...)
 		}
 		if ((format[l] == 'c' || format[l] == 'i' || format[l] == 'f' ||
 			format[l] == 's')  && (format[l + 1] != '\0'))
-		{
 			printf(", ");
-		}
 		l++;
 	}
 	va_end(any);
