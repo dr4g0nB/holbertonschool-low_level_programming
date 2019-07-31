@@ -16,12 +16,11 @@ C language
 
 Task | Description
 ------------ | -------------
-0 | Preprocessor
-1 | Compiler
-2 | Assembler
-3 | Name
-4 | Hello, puts
-5 | Hello, printf
-6 | Size is not grandeur, and territory does not make a nation
-8 | Intel
-9 | UNIX
+0 | Runs a C file through the preprocessor
+1 | Compiles a C file 
+2 | Generates the assembly code of a C code
+3 | Creates an executable 
+4 | Prints an exact line
+5 | Prints an exact line
+6 | Prints the size of various types
+8 | Generates the assembly code of a C code
