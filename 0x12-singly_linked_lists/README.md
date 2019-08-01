@@ -12,7 +12,7 @@ Data structures && Algorithms.
 ### Mandatory tasks
 
 | Task    | Description |
-| ——-| —————- |
+------------ | -------------
 | 0 | Prints all the elements of a list |
 | 1 | Returns the number of elements in a linked list |
 | 2 | Adds a node at the beginning of a list |
