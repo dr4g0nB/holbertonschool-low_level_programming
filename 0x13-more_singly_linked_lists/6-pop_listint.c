@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * pop_listint - Deletes the head of a linked list.
@@ -9,7 +10,7 @@
 int pop_listint(listint_t **head)
 {
 	int data;
-	listint_t tmp;
+	listint_t *tmp;
 
 	if (*head == NULL)
 	{
