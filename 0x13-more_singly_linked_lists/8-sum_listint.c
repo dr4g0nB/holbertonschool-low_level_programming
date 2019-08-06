@@ -8,28 +8,25 @@
 
 int sum_listint(listint_t *head)
 {
-	listint_t *tmp;
 	int sum;
 
-	tmp = head;
-
-	/**
-	* if (head == NULL)
-	* {
-	*	return (0);
-	* }
-	*/
+	if (head == NULL)
+	{
+		return (0);
+	}
 
 	/**sum = 0;*/
-	while (tmp != NULL)
+	while (head != NULL)
 	{
-		if (head->next == NULL)
-		{
-			return (0);
-		}
+		/**
+		* if (head->next == NULL)
+		* {
+		*	return (0);
+		* }
+		*/
 
-		sum += tmp->n; /** tmp->n;*/
-		tmp = tmp->next;
+		sum += head->n; /** tmp->n;*/
+		head = head->next;
 		/**sum++;*/
 	}
 	return (sum);
