@@ -13,7 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *innode;
 	listint_t *tmp;
-	unsigned int len;
+	unsigned int len = 0;
 
 	if (head == NULL && idx != 0)
 	{
@@ -26,14 +26,14 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	}
 	innode->n = n;
-	if (idx == 0)
+	if (idx == 0)/** In case what is being sent is nth */
 	{
 		innode->next = *head;
 		*head = innode;
 		return (innode);
 	}
 	tmp = *head;
-	while (len > idx - 1)
+	while (len < idx - 1)
 	{
 		tmp = tmp->next;
 		if (tmp == NULL)
