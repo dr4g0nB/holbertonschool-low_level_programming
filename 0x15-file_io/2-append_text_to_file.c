@@ -39,10 +39,7 @@ int append_text_to_file(const char *filename, char *text_content)
 		}
 		wr = write(op, text_content, len);
 	}
-	if (wr == -1)
-	{
-		return (-1);
-	}
+	
 	if (wr == -1 || wr != len)
 	{
 		return (-1);
