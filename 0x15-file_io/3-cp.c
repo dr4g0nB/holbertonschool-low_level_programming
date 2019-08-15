@@ -2,8 +2,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
-#include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include "holberton.h"
 
 /**
 * error_read - Error ro read.
@@ -12,7 +13,8 @@
 
 void error_read(char *file)
 {
-	dprintf(STDERROR_FILENO, Error : Can't read from file NAME_OF_THE_FILE);
+	
+	dprintf(STDERR_FILENO, "Error : Can't read from file %s\n", file);
 	exit(98);
 }
 
@@ -23,7 +25,7 @@ void error_read(char *file)
 
 void error_write(char *file)
 {
-	dprintf();
+	dprintf(STDERR_FILENO,"Error: Can't write to %s\n", file );
 	exit(99);
 }
 
@@ -34,7 +36,7 @@ void error_write(char *file)
 
 void error_close(char *file)
 {
-	dprintf(STDERRPR_FILENO, Error : Can't close fd FD_VALUE);
+	dprintf(STDERR_FILENO, "Error : Can't close fd %s\n", file);
 	exit(100);
 }
 
@@ -51,40 +53,37 @@ int main(int argc, char *argv[])
 	char buf[1024];
 
 	if (argc != 3)
-		dprintf(STEDERR_FILENO, Usage : cp file_from file_to);
+		dprintf(STDERR_FILENO, "Usage : cp file_from file_to");
 		exit(97);
 	/** Open origin file */
-	op = open(argv[1], 0_RDONLY);
+	op = open(argv[1], O_RDONLY);
 	if (op == -1)
-		dprintf(STDERROR_FILENO, Error : Can't read from file NAME_OF_THE_FILE);
-		exit(98);
+		error_write(argv[1]);
 	/** Opens destiny file */
 	en = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (en == -1)
 	{
-		dprintf(STDERROR_FILENO, Error : Can't read from file NAME_OF_THE_FILE);
-		exit(98);
+		error_write(argv[2]);
 	}
 	/** Read and write and repeat if equal to buf */
 	do {
 		rd = read(op, buf, 1024);
 		if (rd == -1)
-			dprintf(STDERROR_FILENO, Error : Can't read from file NAME_OF_THE_FILE);
-			 exit(98);
+			error_read(argv[1]);
 		wr = write(en, buf, rd);
 		if (wr == -1)
-			void error_read(char *file, argv[2]);
+			error_write(argv[2]);
 	}
-	while (rd = 1024)
-	{
+	while (rd >= 1024)
+	;{
 		if (wr < rd)
-			void error_write(char *file, argv[2]);
+			 error_write(argv[2]);
 	}
 	/** Close each file */
 	clop = close(op);
 	if (clop == -1)
-		void error_close(char *file, argv[1]);
+		error_close(argv[1]);
 	clen = close(en);
 	if (clen == -1)
-		void error_close(char *file, argv[2]);
+		error_close(argv[2]);
 }
