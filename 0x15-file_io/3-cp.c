@@ -66,18 +66,14 @@ int main(int argc, char *argv[])
 		error_write(argv[2]);
 	}
 	/** Read and write and repeat if equal to buf */
-	do {
+	while (rd == 1024)
+	{
 		rd = read(op, buf, 1024);
 		if (rd == -1)
 			error_read(argv[1]);
 		wr = write(en, buf, rd);
-		if (wr == -1)
-			error_write(argv[2]);
-	}
-	while (rd >= 1024)
-	;{
 		if (wr < rd)
-			 error_write(argv[2]);
+			error_write(argv[2]);
 	}
 	/** Close each file */
 	clop = close(op);
@@ -86,4 +82,5 @@ int main(int argc, char *argv[])
 	clen = close(en);
 	if (clen == -1)
 		error_close(argv[2]);
+	return (0);
 }
