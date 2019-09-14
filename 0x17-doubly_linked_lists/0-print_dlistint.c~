@@ -1,0 +1,14 @@
+#include "lists.h"
+
+size_t print_dlistint(const dlistint_t *h)
+{
+	int len;
+
+	len = 0;
+	while (h != '\0')
+	  /**		h -> previous*/
+	  printf("%d", len);
+		len++;
+	
+	return(len);
+}
