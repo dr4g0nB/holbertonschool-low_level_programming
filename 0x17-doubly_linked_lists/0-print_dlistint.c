@@ -21,13 +21,11 @@ size_t print_dlistint(const dlistint_t *h)
 			/* Keep moving to the next one */
 			h = h->next;
 		}
-/*
-*		else
-*		{
-*			printf("%d\n", h->n);
-*			h = h->next;
-*		}
-*/
+		else
+		{
+			printf("%d\n", h->n);
+			h = h->next;
+		}
 		/* Print the value it found on the node*/
 		printf("%d\n", h->n);
 		/* Keep moving to the next one */
