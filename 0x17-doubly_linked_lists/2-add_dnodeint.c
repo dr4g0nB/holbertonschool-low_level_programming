@@ -15,7 +15,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 
 	/** Checks if the head is NULL */
 	if (*head == NULL)
-	{	
+	{
 		return (NULL);
 	}
 
@@ -28,7 +28,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	}
 
 	/** Data for new node*/
-	new_n->n = n; 
+	new_n->n = n;
 	/** Next is head and previous is NULL */
 	new_n->prev = NULL;
 	new_n->next = *head;
@@ -37,7 +37,7 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 		(*head)->prev = new_n;
 	}
 	*head = new_n;
-	
+
 	/** Returns address of the new node */
 	return (new_n);
 }
