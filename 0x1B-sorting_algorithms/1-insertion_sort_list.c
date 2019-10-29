@@ -3,81 +3,80 @@
 /**
  * check - check the list
  *
- * @list: list of integers
- * @temp: temporal Variable
+ * @list: list of ints
+ * @now: oral Variable
  * Return: void
  */
 
-void check(listint_t *temp, listint_t **list)
+void check(listint_t *now, listint_t **list)
 {
-	while (temp->prev != NULL)
+	while (now->prev != NULL)
 	{
-		if (temp->n < temp->prev->n)
+		if (now->n < now->prev->n)
 		{
-			temp->prev->next = temp->next;
-			temp->next->prev = temp->prev;
-			if (temp->prev->prev == NULL)
+			now->prev->next = now->next;
+			now->next->prev = now->prev;
+			if (now->prev->prev == NULL)
 			{
-				*list = temp;
-				temp->next = temp->prev;
-				temp->prev = NULL;
+				*list = now;
+				now->next = now->prev;
+				now->prev = NULL;
 			}
 			else
 			{
-				temp->prev = temp->prev->prev;
-				temp->next = temp->prev->next;
-				temp->prev->next = temp;
+				now->prev = now->prev->prev;
+				now->next = now->prev->next;
+				now->prev->next = now;
 			}
-			temp->next->prev = temp;
+			now->next->prev = now;
 			print_list(*list);
 		}
 		else
-			temp = temp->prev;
+			now = now->prev;
 	}
 }
-
 
 /**
  * insertion_sort_list - list of ints in ascending order using the Insertion
  * sort algorithm
  *
- * @list: list of integers
+ * @list: list of ints
  * Return: void
  */
 
-
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *temp, *h_move, *idx;
+	listint_t *now = NULL, *move = NULL, *idx = NULL;
 
-	if (list == NULL || *list == NULL)
+	if (list == NULL || *list == NULL ||
+		(*list)->next == NULL || (*list)->next->next == NULL)
 		return;
 
-	h_move = *list;
+	move = *list;
 	idx = *list;
-	temp = *list;
+	now = *list;
 
-	while (h_move != NULL)
+	while (move != NULL)
 	{
-		if (h_move == idx)
-			h_move = h_move->next;
-		else if (h_move != NULL && h_move->n < h_move->prev->n)
+		if (move == idx)
+			move = move->next;
+		else if (move != NULL && move->n < move->prev->n)
 		{
-			temp = h_move;
-			h_move = h_move->next;
-			temp->prev->next = temp->next;
-			if (h_move)
-				temp->next->prev = temp->prev;
-			temp->prev = temp->prev->prev;
-			temp->next = temp->prev->next;
-			temp->prev->next = temp;
-			temp->next->prev = temp;
+			now = move;
+			move = move->next;
+			now->prev->next = now->next;
+			if (move)
+				now->next->prev = now->prev;
+			now->prev = now->prev->prev;
+			now->next = now->prev->next;
+			now->prev->next = now;
+			now->next->prev = now;
 			print_list(*list);
-			check(temp, list);
+			check(now, list);
 		}
 		else
 		{
-			h_move = h_move->next;
+			move = move->next;
 		}
 	}
 }
