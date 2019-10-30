@@ -38,8 +38,8 @@ int partition(int *array, size_t size, size_t start, size_t pivot)
 			{
 				swap(&array[start], &array[i]);
 				print_array(array, size);
+				start++;
 			}
-			start++;
 		}
 	}
 	if (array[start] > array[pivot])
