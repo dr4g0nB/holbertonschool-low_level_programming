@@ -38,8 +38,8 @@ int partition(int *array, size_t size, size_t start, size_t pivot)
 			{
 				swap(&array[start], &array[i]);
 				print_array(array, size);
-				start++;
 			}
+			start++;
 		}
 	}
 	if (array[start] > array[pivot])
@@ -65,6 +65,7 @@ void lquick(int *array, size_t size, size_t start, size_t end)
 {
 	size_t split;
 
+
 	if (end == 0 || end <= start)
 	{
 		return;
@@ -78,7 +79,8 @@ void lquick(int *array, size_t size, size_t start, size_t end)
 	{
 		lquick(array, size, split + 1, end);
 	}
-}
+
+}	
 
 /**
  * quick_sort - Sorts using the quick sort algorithm
@@ -88,5 +90,8 @@ void lquick(int *array, size_t size, size_t start, size_t end)
  */
 void quick_sort(int *array, size_t size)
 {
+	if (array == NULL || size < 2)
+		return;
+
 	lquick(array, size, 0, size - 1);
 }
