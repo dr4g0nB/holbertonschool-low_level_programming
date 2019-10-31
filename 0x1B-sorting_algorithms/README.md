@@ -1,1 +1,35 @@
-# C - Sorting algorithms & Big O
+# holbertonschool-low_level_programming
+# 0x1B. C - Sorting algorithms & Big O
+### Description
+This project is about sorting algorithms like: bubble, quick, insertion and sel\
+ection sort, also calculating the time complexity of each algorithm with Big O \
+notation.
+## Files
+#### Mandatory Tasks
+| File | Description |
+| ------ | ------ |
+| [0-bubble_sort.c](0-bubble_sort.c) | Function that sorts an array of integers\
+ in ascending order using the Bubble sort algorithm. |
+| [1-insertion_sort_list.c](1-insertion_sort_list.c) | Function that sorts a do\
+ubly linked list of integers in ascending order using the Insertion sort algori\
+thm. |
+| [2-selection_sort.c](2-selection_sort.c) | Function that sorts an array of in\
+tegers in ascending order using the Selection sort algorithm. |
+| [3-quick_sort.c](3-quick_sort.c) | Function that sorts an array of integers i\
+n ascending order using the Quick sort algorithm |
+#### Big O files
+| File | Description |
+| ------ | ------ |
+| [0-O](0-O) | The big O notations of the time complexity of the Bubble sort al\
+gorithm |
+| [1-O](1-O) | The big O notations of the time complexity of the Insertion sort\
+ algorithm |
+| [2-O](2-O) | The big O notations of the time complexity of the Selection sort\
+ algorithm |
+| [3-O](3-O) | The big O notations of the time complexity of the Quick sort alg\
+orithm |
+## Author
+[Bárbara Calle](https://www.linkedin.com/in/b%C3%A1rbara-calle-7363a0164/) [:oc\
+tocat:](https://github.com/dabrabgellak)
+[Daniela Chamorro](https://www.linkedin.com/in/daniela-alexandra-chamorro-guerr\
+ero-666805a1/) [:octocat:](https://github.com/dalexach)
