@@ -29,7 +29,7 @@ gorithm |
 | [3-O](3-O) | The big O notations of the time complexity of the Quick sort alg\
 orithm |
 ## Author
-[Bárbara Calle](https://www.linkedin.com/in/b%C3%A1rbara-calle-7363a0164/) [:oc\
-tocat:](https://github.com/dabrabgellak)
+[Bárbara Calle](https://www.linkedin.com/in/b%C3%A1rbara-ca\
+lle-7363a0164/) [:octocat:](https://github.com/dabrabgellak)
 [Daniela Chamorro](https://www.linkedin.com/in/daniela-alexandra-chamorro-guerr\
 ero-666805a1/) [:octocat:](https://github.com/dalexach)
