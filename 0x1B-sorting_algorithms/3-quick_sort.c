@@ -79,8 +79,7 @@ void lquick(int *array, size_t size, size_t start, size_t end)
 	{
 		lquick(array, size, split + 1, end);
 	}
-
-}	
+}
 
 /**
  * quick_sort - Sorts using the quick sort algorithm
