@@ -26,7 +26,7 @@ void swap(int *i, int *j)
  * Return: pivot
  */
 
-int partition(int *array, size_t size, size_t start, size_t pivot)
+size_t partition(int *array, size_t size, size_t start, size_t pivot)
 {
 	size_t i;
 
