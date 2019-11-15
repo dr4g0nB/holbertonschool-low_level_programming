@@ -1,6 +1,6 @@
 #Another makefile
-CC := gcc
-SRC := main.c holberton.c
+CC = gcc
+SRC = main.c holberton.c
 
-all: $(SRC) m.h
+all:
 	$(CC) $(SRC) -o holberton
