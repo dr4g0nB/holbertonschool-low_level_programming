@@ -5,7 +5,6 @@
  * @array: Pointer to the first element of the array to search in.
  * @low_side: Left side of half array.
  * @high_side: Right side of half array.
- * @size: Number of elements in array.
  */
 
 void print_array(int *array, int low_side, int high_side)
