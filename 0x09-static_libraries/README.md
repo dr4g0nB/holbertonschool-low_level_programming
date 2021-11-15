@@ -1,5 +1,6 @@
-0x09. C - Static libraries
+# Static libraries
 
+### Learning Objectives
 - What is a static library?.
 - How does it work?.
 - How to create one?.
